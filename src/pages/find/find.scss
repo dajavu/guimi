@@ -1,0 +1,18 @@
+page-find {
+  .segment {
+    // box-shadow: 2px 3px 4px $shadowColor;
+    background: white;
+    
+    ion-segment-button.segment-button {
+      color: $fontColor;
+      font-size: 14px;
+    }
+    ion-segment-button.segment-activated{
+      border-color: $mainColor !important;
+    }
+  }
+  .find-nav{
+    position: sticky;
+    top: 0px;
+  }
+}

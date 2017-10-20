@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-navbar color="pink">
+      <ion-buttons start>
+        <button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+      </ion-buttons>
+      <ion-title>
+        搜索
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content style="background:white" padding>
+    <div class="search-bar">
+      <input class="search-input" [(ngModel)]="searchValue" type="text" placeholder="搜索"/>
+      <ion-icon name="ios-search" (click)="search(searchValue)"></ion-icon>
+    </div>
+    <div class="search-recommend-list">
+      <button ion-button color="pinkDark" *ngFor="let flag of flagList" (click)="search(flag)">{{flag}}</button>
+    </div>
+  </ion-content>

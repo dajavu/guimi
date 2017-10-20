@@ -1,0 +1,31 @@
+<ion-content>
+  <div class="top-nav">
+    <ion-segment *ngIf="categoryList[0]" [(ngModel)]="goodsParam.Category">
+      <ion-segment-button (click)="changeCategory()" value="{{category.Value}}" *ngFor="let category of categoryList">{{category.Key}}</ion-segment-button>
+    </ion-segment>
+    <div class="top-search" (click)="goSearch()">
+      <ion-icon name="ios-search"></ion-icon>
+    </div>
+  </div>
+   
+  <div class="top-filter">
+    <div [ngClass]="{'top-filter-active':goodsParam.Orderby == '0'}" (click)="changeStatus('0')">综合</div>  
+    <div [ngClass]="{'top-filter-active':goodsParam.Orderby == '1'}" (click)="changeStatus('1')">销量</div>  
+    <div [ngClass]="{'top-filter-active':goodsParam.Orderby == '4'}" (click)="changeStatus('4')">价格</div>  
+  </div>
+  
+  <!--商品列表控件-->
+  <commodity *ngIf="commodityList[0]" [commodityList]="commodityList"></commodity>
+  <!--如果没有数据-->
+  <div *ngIf="commodityPage && commodityPage.PageCount == 0" class="no-goods">
+    亲，您搜索的宝贝不存在！
+  </div>
+
+  <ion-infinite-scroll (ionInfinite)="moreCommodity($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+  <!-- <ion-fab right bottom>
+    <button ion-fab color="pink"><ion-icon name="ios-arrow-up-outline"></ion-icon></button>
+  </ion-fab> -->
+</ion-content>

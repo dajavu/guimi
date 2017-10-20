@@ -1,0 +1,23 @@
+<ion-content>
+  <ion-slides pager style="height:170px" autoplay="5000">
+    <ion-slide style="background:url(./assets/image/head5.jpg);background-size:100% 100%"></ion-slide>
+    <ion-slide style="background:url(./assets/image/head6.jpg);background-size:100% 100%"></ion-slide>
+    <ion-slide style="background:url(./assets/image/head7.jpg);background-size:100% 100%"></ion-slide>
+  </ion-slides>
+
+  <ion-segment [(ngModel)]="status" class="find-nav">
+    <ion-segment-button value="0">最新</ion-segment-button>
+    <ion-segment-button value="1">家居</ion-segment-button>
+    <ion-segment-button value="2">礼物</ion-segment-button>
+    <ion-segment-button value="3">美食</ion-segment-button>
+    <ion-segment-button value="4">生活</ion-segment-button>
+  </ion-segment>
+
+  <essay [essayList]="assayList"></essay>
+  <!-- <div [ngSwitch]="status">
+    <div *ngSwitchCase="'0'">
+      <essay [essayList]="assayList"></essay>
+    </div>
+    <div *ngSwitchCase="'1'">haha</div>
+  </div> -->
+</ion-content>

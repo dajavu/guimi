@@ -2,6 +2,27 @@
 
 
 // App Global Sass
+$mainColor: #EE706B;
+$mainColorDark: #F39E9A;
+$fontColor: #494949;
+$fontColorLight: #252525;
+$fontColorDark: #808080;
+$bgColor: #F6F6F6;
+$lineColor: #F1F1F1;
+$shadowColor: #DFDFDF;
+$iconColor: #929292;
+.content{
+  background: $bgColor;
+  color: $fontColor;
+}
+
+.no-goods{
+  text-align: center;
+  font-size: 15px;
+  line-height: 40px;
+  color: $fontColorDark;
+  margin-top: 10px;
+}
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These
 // styles are for the entire app and not just one component.

@@ -1,0 +1,51 @@
+page-account{
+  .account-header{
+    text-align: center;
+    background: url(../assets/image/11.png),linear-gradient($mainColor,$mainColorDark);
+    background-size: 100% auto;
+    width: 100%;
+    color: white;
+  }
+  .account-header img{
+    margin-top: 25px;
+    border-radius: 50%;
+    width: 20%;
+    height: auto;
+  }
+  .account-name{
+    margin-top: 5px;
+    line-height: 20px;
+    font-size: 14px;
+  }
+  .account-detail{
+    line-height: 20px;
+    font-size: 13px;
+    padding-bottom: 10px;
+  }
+
+  .account-list{
+    margin-top: 10px;
+  }
+  .account-item{
+    width: 100%;
+    line-height: 30px;
+    padding: 10px;
+    font-size: 14px;
+    position: relative;
+    display: flex;
+    background: white;
+    border-bottom: 1px solid $lineColor;
+  }
+  .account-item span{
+    flex: 1;
+    color: $fontColor;
+  }
+  .account-item-start,.account-item-end{
+    flex: none;
+    width: 40px;
+    color:  $iconColor;
+    font-size: 22px;
+    line-height: 30px;
+    text-align: center;
+  }
+}

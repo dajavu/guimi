@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar color="pink">
+    <ion-buttons start>
+      <button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-toolbar>
+      <div class="header-search">
+        <input type="text" [(ngModel)]="goodsParam.Name" placeholder="搜索"/>
+        <ion-icon name="ios-search" (click)="search(searchValue)"></ion-icon>
+      </div>
+    </ion-toolbar>
+  </ion-navbar>
+</ion-header>
+  
+<ion-content>
+  <commodity *ngIf="commodityList[0]" [commodityList]="commodityList"></commodity>
+  <!--如果没有数据-->
+  <div *ngIf="commodityPage && commodityPage.PageCount == 0" class="no-goods">
+    亲，您搜索的宝贝不存在！
+  </div>
+
+  <ion-infinite-scroll (ionInfinite)="moreCommodity($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

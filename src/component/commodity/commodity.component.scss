@@ -1,0 +1,50 @@
+.commodity-list{
+  width: 100%;
+  margin-top: 5px;
+}
+.commodity-item{
+  margin-bottom: 4px;
+  background: white;
+  width: calc(50% - 2px);
+  padding: 10px;
+  min-height: 100px;
+  display: inline-block;
+}
+.commodity-item:nth-child(2n){
+  margin-left: 4px;
+}
+.commodity-item img{
+  width: 100%;
+  height: auto;
+}
+.commodity-titel{
+  padding: 7px 1px;
+  line-height: 20px;
+  color: $fontColorDark;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  border-bottom: 1px solid $lineColor;
+}
+.commodity-detail{
+  position: relative;
+  line-height: 20px;
+}
+.commodity-detail{
+  margin-top: 7px;
+  line-height: 20px;
+}
+.commodity-money{
+  color: $fontColor;
+}
+.commodity-flag{
+  border: 1px solid $mainColorDark;
+  padding: 0px 1px;
+  border-radius: 2px;
+  font-size: 12px;
+  line-height: 17px;
+  color: $mainColorDark;
+  position: absolute;
+  top: 0px;
+  right: 3px;
+}

@@ -1,17 +1,66 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
+  <ion-navbar color="pink">
+    <ion-buttons start>
+      <button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>
+      首页
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="goSearch('search')">
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
-
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content>
+  <ion-slides pager style="height:150px" autoplay="5000">
+    <ion-slide style="background:url(./assets/image/head1.jpg);background-size:100% 100%"></ion-slide>
+    <ion-slide style="background:url(./assets/image/head2.jpg);background-size:100% 100%"></ion-slide>
+    <ion-slide style="background:url(./assets/image/head3.jpg);background-size:100% 100%"></ion-slide>
+    <ion-slide style="background:url(./assets/image/head4.jpg);background-size:100% 100%"></ion-slide>
+  </ion-slides>
+  <div class="home-anchor" (click)="goTop()">
+    <div class="home-anchor-image">
+      <div class="home-anchor-item">
+        <img src="./assets/image/search_taobao.png"/>
+      </div>
+      <div class="home-anchor-item">
+        <img src="./assets/image/search_tianmao.png"/>
+      </div>
+      <div class="home-anchor-item">
+        <img src="./assets/image/search_quan.png"/>
+      </div>
+      <div class="home-anchor-item">
+        <img src="./assets/image/search_jd.png"/>
+      </div>
+      <div class="home-anchor-item">
+        <img src="./assets/image/search_more.png"/>
+      </div>
+    </div>
+    <div class="home-anchor-text">
+      <div class="home-anchor-text-item">淘宝精选</div>
+      <div class="home-anchor-text-item">天猫返利</div>
+      <div class="home-anchor-text-item">超级券</div>
+      <div class="home-anchor-text-item">京东返利</div>
+      <div class="home-anchor-text-item">商场返利</div>
+    </div>
+  </div>
+  <!--推荐-->
+  <div class="home-recommend">
+    <div class="home-recommend-left">
+      <img src="./assets/image/home_anchor_1.png"/>
+    </div>
+    <div class="home-recommend-right">
+        <img src="./assets/image/home_anchor_2.png"/>
+        <img src="./assets/image/home_anchor_2.png"/>
+    </div>
+  </div>
+  <div class="home-recommend-title">
+    今日推荐
+  </div>
+  <!--商品列表控件-->
+  <commodity *ngIf="commodityRes" [commodityList]="commodityRes.Items"></commodity>
 </ion-content>

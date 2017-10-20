@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar color="pink">
+    <ion-buttons start>
+      <button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>
+      登陆
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content style="background:white">
+    <ion-list class="login-input">
+      <ion-item>
+        <ion-label><ion-icon name="ios-outlet-outline"></ion-icon></ion-label>
+        <ion-input type="text" placeholder="账号"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label><ion-icon name="ios-unlock-outline"></ion-icon></ion-label>
+        <ion-input type="password" placeholder="密码"></ion-input>
+        <!-- <ion-icon name="ios-eye-outline" item-right></ion-icon> -->
+      </ion-item>
+    </ion-list>
+    <div class="login-submit">
+      <button ion-button block (click)="submit()">登陆</button>
+    </div>
+</ion-content>

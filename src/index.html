@@ -3,17 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title>Ionic App</title>
-  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="format-detection" content="telephone=no">
   <meta name="msapplication-tap-highlight" content="no">
 
   <link rel="icon" type="image/x-icon" href="assets/icon/favicon.ico">
   <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#4e8ef7">
-  
-  <!-- add to homescreen for ios -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="theme-color" content="#EE706B">
 
   <!-- cordova.js required for cordova apps -->
   <script src="cordova.js"></script>
@@ -33,7 +29,9 @@
 <body>
 
   <!-- Ionic's root component and where the app will load -->
-  <ion-app></ion-app>
+  <ion-app class="md">
+    <img src="./assets/image/drawable-port-xhdpi-screen.png"/ width="100%" height="100%">
+  </ion-app>
 
   <!-- The polyfills js is generated during the build process -->
   <script src="build/polyfills.js"></script>

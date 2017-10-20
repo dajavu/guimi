@@ -1,0 +1,10 @@
+<div class="commodity-list">
+  <div class="commodity-item" *ngFor="let commodity of commodityList" (click)="showDetail(commodity.ID)">
+    <img *ngIf="commodity" src="{{commodity.ImageUrl}}"/>
+    <div class="commodity-titel">{{commodity.Name}}</div>
+    <div class="commodity-detail">
+      <span class="commodity-money">￥{{commodity.ZkFinalPrice}}.00</span>
+      <span class="commodity-flag">有返利</span>
+    </div>
+  </div>
+</div>

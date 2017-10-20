@@ -1,0 +1,57 @@
+<ion-content>
+  <div class="account-header">
+    <img src={{user.avatarUrl}}/>
+    <div class="account-name">{{user.nick}}</div>
+    <!-- <div class="account-detail">可笑的五年</div> -->
+  </div>
+  <div class="account-list">
+    <div class="account-item">
+      <ion-icon class="account-item-start" name="ios-clipboard-outline"></ion-icon>
+      <span>我的订单</span>
+      <ion-icon class="account-item-end" name="ios-arrow-forward-outline"></ion-icon>
+    </div>
+    <div class="account-item">
+      <ion-icon class="account-item-start" name="ios-ribbon-outline"></ion-icon>
+      <span>我的收藏</span>
+      <ion-icon class="account-item-end" name="ios-arrow-forward-outline"></ion-icon>
+    </div>
+
+    <div class="account-item" style="margin-top:10px">
+      <ion-icon class="account-item-start" name="ios-notifications-outline"></ion-icon>
+      <span>客户中心</span>
+      <ion-icon class="account-item-end" name="ios-arrow-forward-outline"></ion-icon>
+    </div>
+    <div class="account-item">
+      <ion-icon class="account-item-start" name="ios-cafe-outline"></ion-icon>
+      <span>常见问题</span>
+      <ion-icon class="account-item-end" name="ios-arrow-forward-outline"></ion-icon>
+    </div>
+    <div class="account-item">
+      <ion-icon class="account-item-start" name="ios-redo-outline"></ion-icon>
+      <span>返利教程</span>
+      <ion-icon class="account-item-end" name="ios-arrow-forward-outline"></ion-icon>
+    </div>
+
+    <div class="account-item" style="margin-top:10px">
+      <ion-icon class="account-item-start" name="ios-settings-outline"></ion-icon>
+      <span>设置</span>
+      <ion-icon class="account-item-end" name="ios-arrow-forward-outline"></ion-icon>
+    </div>
+    <div class="account-item" (click)="logout()">
+      <ion-icon class="account-item-start" name="ios-finger-print"></ion-icon>
+      <span>退出</span>
+      <ion-icon class="account-item-end" name="ios-arrow-forward-outline"></ion-icon>
+    </div>
+
+    <div class="account-item" (click)="getLoginMassage()">
+      <ion-icon class="account-item-start" name="ios-finger-print"></ion-icon>
+      <span>获取登陆信息</span>
+      <ion-icon class="account-item-end" name="ios-arrow-forward-outline"></ion-icon>
+    </div>
+    <div class="account-item" (click)="judgeLogin()">
+      <ion-icon class="account-item-start" name="ios-finger-print"></ion-icon>
+      <span>登陆</span>
+      <ion-icon class="account-item-end" name="ios-arrow-forward-outline"></ion-icon>
+    </div>
+  </div>
+</ion-content>

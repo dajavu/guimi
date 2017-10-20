@@ -1,0 +1,48 @@
+.essay-list{
+  width: 100%;
+}
+.essay-item{
+  margin: 8px;
+  padding: 10px;
+  background: white;
+}
+.essay-item img{
+  width: 100%;
+  height: auto;
+}
+.essay-title{
+  margin: 0px 10px;
+  padding: 10px 0px;
+  line-height: 20px;
+  color: $fontColor;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-align: center;
+  font-size: 16px;
+  letter-spacing: 0.3px;
+  border-bottom: 1px solid $lineColor;
+}
+.essay-detail{
+  text-align: center;
+  color: $fontColorDark;
+  font-size: 13px;
+  padding: 10px 0px 5px 0px;
+}
+.essay-detail span,.essay-detail div{
+  display: inline-block;
+  padding: 0px 6px;
+  border-right: 1px solid $lineColor;
+}
+.essay-opr:last-child{
+  border-right-style: none;
+}
+.essay-opr ion-icon{
+  position: relative;
+  top: 1px;
+}
+.essay-opr span{
+  display: inline-block;
+  padding: 0px 2px;
+  border: none;
+}

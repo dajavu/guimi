@@ -1,3 +1,44 @@
 page-home {
+  .home-anchor-image,.home-anchor-text{
+    width: 100%;
+    display: flex;
+  }
+  .home-anchor{
+    padding: 10px;
+    background: white;
+  }
+  .home-anchor-item{
+    flex: 1;
+    padding:5px 9px;
+  }
+  .home-anchor-text-item{
+    flex: 1;
+    font-size: 12px;
+    text-align: center;
+  }
 
+  .home-recommend{
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .home-recommend-left,.home-recommend-right{
+    flex: none;
+    width: calc(50% - 2px);
+  }
+  .home-recommend-right img{
+    display: block;
+    margin-top: 4px;
+  }
+  .home-recommend-right img:first-child{
+    margin-top: 0 !important;
+  }
+
+  .home-recommend-title{
+    margin-top: 3px;
+    font-size: 14px;
+    text-align: center;
+    background: white;
+    line-height: 40px;
+  }
 }
