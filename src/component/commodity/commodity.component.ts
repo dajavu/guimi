@@ -19,7 +19,7 @@ export class CommodityComponent {
   }
 
   //展示详情
-  showDetail(itemId){
+   async showDetail(itemId){
     let pageArgs = {
       type: 'itemDetailPage',
       itemId: itemId,
@@ -53,14 +53,16 @@ export class CommodityComponent {
       exArgs:{}
     }
     
-    let loading = this.loadingCtrl.create({content: '加载中...'});
-    loading.present();
+    // let loading = this.loadingCtrl.create({content: '加载中...'});
+    // loading.present();
     Baichuan.showPage(pageArgs, tempList, function(res){
-      loading.dismiss();
+      // loading.dismiss();
       console.log(res)
+      alert(JSON.stringify(res))
     }, function(e){
-      loading.dismiss();
+      // loading.dismiss();
       console.log(e)
+      alert(JSON.stringify(e))
     });
   }
 
