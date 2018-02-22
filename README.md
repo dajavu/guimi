@@ -1,26 +1,35 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
 
-## How to use this template
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
+## 说明
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
+支持平台：安卓（4.4版本以上）
 
-### With the Ionic CLI:
+### 运行前准备工作
+1、下载nodejs [参考](https://nodejs.org/en/)
 
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
-
-```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myTabs tabs
-```
-
-Then, to run it, cd into `myTabs` and run:
+2、安装ionic [参考](https://ionicframework.com/)
 
 ```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
+$ npm install -g ionic@latest
 ```
 
-Substitute ios for android if not on a Mac.
+### 使用说明
+
+1、下载文件，根目录运行
+
+```bash
+$ npm install
+```
+
+2、添加Android平台
+
+```bash
+$ ionic cordova platform add android
+```
+
+3、电脑接入Android手机，运行
+
+```bash
+$ ionic cordova run android
+```
 
